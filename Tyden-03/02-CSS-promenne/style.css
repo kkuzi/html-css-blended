@@ -1,0 +1,36 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+h1 {
+  margin-top: 0;
+  color: black;
+}
+
+.box {
+  padding: 1em;
+  border: 5px solid black;
+}
+
+.invert {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+.link {
+  color: blue;
+}

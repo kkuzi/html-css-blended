@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulářové prvky</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Formulář</h1>
+
+  <!--
+    Formulář
+    action: adresa, kam se odesílají data
+    method: jakým způsobem se odesílají
+      - GET: jako součást adresy, omezené množství dat (max 2048 znaků)
+      - POST: "skrytě", bez omezení velikosti
+
+    Zkusíme formulář odesílat na adresu:
+    http://formular.itgirls.cz
+  -->
+
+  <form action="http://formular.itgirls.cz" method="post">
+
+    <!--
+      INPUT
+      type="text" ... jde o textové pole, existují i další typy
+      name: název pole pro zpracování na serveru
+      id: jedinečný identifikátor pro popis pole, javascript, apod.
+      value: výchozí hodnota
+      size: velikost textového pole, cca počet znaků (ale jde zadat víc)
+      maxlength: max. délka, která jde zadat
+      placeholder: nápověda, když je pole prázdné
+      autofocus ... automaticky se "zaostří" při načtení stránky
+      disabled  ... vypnuté pole (neodesílá se na server)
+      readonly  ... jen pro čtení, nejde do něj psát, ale hodnota se odešle na server
+      required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání
+    -->
+
+    <div class="form-field">
+      <label for="jmeno">Jméno</label>
+
+      <input
+        type="text"
+        name="jmeno"
+        id="jmeno"
+        value="Jana"
+        placeholder="Křestní jméno"
+        maxlength="10"
+        size="10"
+        autofocus
+        required
+      >
+    </div>
+
+
+    <!-- <label>
+      Jméno
+      <input type="text">
+    </label> -->
+
+
+
+    <!--
+      LABEL - popisek formulářového pole
+      for: id formulářového prvku, pro který je toto popisek
+    -->
+
+
+
+    <!--
+      Tlačítko - lze vytvořit dvěma způsoby
+      1) <input type="submit" value="OK">
+      2) <button type="submit">OK<button>
+
+      Ať už <input> nebo <button> s type="submit" je výchozí tlačítko,
+      které se "stiskne" a odešle formulář, když kdekoliv ve formuláři
+      stiskneme klávesu Enter.
+    -->
+
+    <!-- <input type="submit" value="Odeslat"> -->
+
+    <button type="submit">Odeslat</button>
+
+
+    <!--
+      Další typy vstupních polí:
+      <input type="xxx">, kde "xxx" určuje typ pole
+    -->
+
+
+
+    <!--
+      NUMBER - číslo
+      Další atributy: min, max, step
+    -->
+
+    <div>
+      <input
+        type="number"
+        name="cislo"
+        id="cislo"
+        min="10"
+        max="30"
+        step="3"
+        value="15"
+      >
+    </div>
+
+
+    <!--
+      PASSWORD - heslo
+      zobrazuje hvězdičky místo textu
+
+      EMAIL - emailová adresa
+      URL - webová adresa
+      TEL - telefonní číslo
+      DATE - datum
+      DATETIME-LOCAL - datum a čas
+      COLOR - barva
+    -->
+    <!-- <div>
+      <input type="password">
+    </div>
+
+    <div>
+      <input type="date">
+    </div>
+
+    <div>
+      <input type="color">
+    </div> -->
+
+    <!--
+      TEXTAREA - víceřádkové textové pole
+      name: nazev ple pro zpracování na serveru
+      rows: počet zobrazených řádků (ale do pole lze zadat víc)
+      cols: počet písmen na řádek
+      maxlength: max. počet znaků, která jdou zadat
+     -->
+<!--
+    <div>
+
+      <label for="adresa">Adresa</label>
+      <textarea
+        name="adresa" id="adresa"
+        rows="5"
+        cols="30"
+      >
+Ulice 123
+Mestecko nad Rekou
+      </textarea>
+
+
+    </div> -->
+
+
+
+
+    <!--
+      CHECKBOX - zaškrtávácí políčko
+      <input type="checkbox">
+      name: název pole pro zpracování na serveru
+      value: hodnota, která se při zaškrtnutí odešle na server
+      checked ... pokud atribut existuje, je pole zaškrtnuté
+    -->
+
+    <div>
+
+      <input
+        type="checkbox"
+        name="souhlas"
+        id="souhlas"
+        checked
+        value="ano"
+      >
+
+      <label for="souhlas">Souhlasim s obchodnimi podminkami</label>
+
+    </div>
+
+
+    <!--
+      RADIO - přepínače (jen jeden ze skupiny může být vybraný)
+      <input type="radio">
+
+      name: název pole pro zpracování na serveru
+      ↑↑↑ všechny přepínače ve skupině mají stejnou hodnotu name
+
+      id: jedinečný identifikátor pro label nebo třeba JavaScript
+      ↑↑↑ každý radiobutton ve skupině má vlastní
+
+      value: hodnota, která se při zaškrtnutí odešle na server
+      checked ... pokud atribut existuje, je pole zaškrtnuté
+      disabled, required
+    -->
+
+
+    <div>
+      <input type="radio" name="ovoce" id="ovoce1" value="jablko">
+      <label for="ovoce1">jablko</label>
+    </div>
+    <div>
+      <input type="radio" name="ovoce" id="ovoce2" value="hruska">
+      <label for="ovoce2">hruska</label>
+    </div>
+    <div>
+      <input type="radio" name="ovoce" id="ovoce3" value="meloun">
+      <label for="ovoce3">meloun</label>
+    </div>
+
+
+    <!--
+      SELECT - roletka, výběr z možností
+      <select>
+        <option>...</option>
+      </select>
+
+      Atributy select:
+      name: název pole pro zpracování na serveru
+      id: jedinečný identifikátor pro label nebo třeba JavaScript
+      disabled, required
+
+      Atributy option:
+      value: hodnota, která se při výběru odešle na server
+      selected ... výchozí vybraná hodnota
+    -->
+
+    <div>
+      <label for="mesto">Město</label>
+
+      <select name="mesto" id="mesto">
+        <option value=""></option>
+        <option value="110 00">Praha</option>
+        <option value="602 00" selected>Brno</option>
+        <option value="480 00">Ostrava</option>
+      </select>
+  </div>
+
+  </form>
+
+</body>
+</html>

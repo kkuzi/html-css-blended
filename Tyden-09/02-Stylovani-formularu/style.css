@@ -1,0 +1,72 @@
+/* intuitivnejsi box siying */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+  margin: 20px;
+  font: 16px/1.5 sans-serif ;
+}
+
+/* ------------------------- */
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.form-field input[type=text],
+.form-field select {
+  padding: 0.5em;
+  border: 1px solid dodgerblue;
+  border-radius: 10px;
+  font-family: Georgia;
+  font-size: 20px;
+}
+
+option {
+  background-color: yellow;
+}
+
+
+.button {
+  padding: 1em;
+  border: 3px solid red;
+  background: yellow;
+  border-radius: 10px;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+/*
+.form-field-inline {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-field-inline label {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.form-field-inline input[type=text] {
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+  */
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  accent-color: red;
+  /* appearance: none; */
+}

@@ -1,0 +1,64 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+html {
+  /* vychozi hodnota 16px */
+}
+
+body {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.box1 {
+  /* px - absolutni */
+  background: dodgerblue;
+}
+
+.box2 {
+  /* % - relativni */
+  background: tomato;
+}
+
+.box3 {
+  /* vw, vh  - viewport units, relativni */
+  background: mediumseagreen;
+}
+
+.box4 {
+  /* rem */
+  background: orange;
+}
+
+.box5 {
+  /* em */
+  background: mediumpurple;
+}
+
+.box1, .box2, .box3, .box4, .box5 {
+  margin: 5px 0;
+  padding: 10px;
+  color: white;
+}
+
+.kontejner1 {
+  padding: 1em;
+  border: 5px solid grey;
+}
+
+.kontejner2 {
+  padding: 1em;
+  border: 5px solid silver;
+}
+
+.velikost-rem {
+  font-size: 1rem;
+}
+
+.velikost-em {
+  font-size: 1em;
+}

@@ -1,0 +1,46 @@
+/* intuitivnejsi box-sizing */
+*, :after, :before { box-sizing: border-box; }
+
+body {
+	font-family: sans-serif;
+}
+
+.blok {
+  padding: 20px;
+}
+
+.horni { background-color:#f1c40f ;}
+.prvni { background-color: #2ecc71;}
+.druhy { background-color: #e74c3c;}
+.treti { background-color: #8e44ad;}
+
+/* ---------------------------------------------------- */
+
+/*
+	Nakóduj stránku podle obrázku zadani-ukolu.jpg.
+	Rozložení stránky se mění v breakpointech:
+	- 640px
+	- 1000px
+*/
+
+@media (min-width: 640px) {
+	.kontejner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.prvni,
+	.druhy {
+		width: 50%;
+	}
+	.treti {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.prvni,
+	.druhy,
+	.treti {
+		width: calc(100% / 3);
+	}
+}
