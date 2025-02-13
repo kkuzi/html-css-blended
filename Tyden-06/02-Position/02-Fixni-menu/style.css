@@ -1,0 +1,71 @@
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+
+/* spolecne */
+body {
+	font: 18px/1.5 sans-serif;
+}
+
+
+.hlavicka {
+	/*
+	napozicuj hlavičku fixně tak, aby byla stále
+	viditelná u horního okraje okna prohlížeče
+	a obsah stránky skroloval pod ní
+	*/
+
+}
+
+.paticka {
+	/*
+	napozicuj patičku fixně tak, aby byla stále
+	viditelná u dolního okraje okna prohlížeče
+	a obsah stránky skroloval pod ní
+	*/
+
+}
+
+.obsah {
+	/*
+	margin nebo padding, aby obsah nahoře a dole na stránce
+	nebyl zakrytý hlavičkou a patičkou
+	*/
+
+}
+
+
+
+
+/* ---------------------------------------- */
+
+/*
+	horizontální menu nastylované pomocí flexboxu
+	viz lekce: Flexbox
+*/
+.menu {
+	margin: 0;
+	padding: 0;
+	background-color: lightblue;
+	display: flex;
+	list-style: none;
+}
+
+.menu a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 30px;
+}
+
+.menu a:hover {
+	background-color: blue;
+	color: white;
+}
+
+/* styl pro patičku */
+.paticka {
+	background-color: lightblue;
+	padding: 20px;
+	text-align: center;
+}

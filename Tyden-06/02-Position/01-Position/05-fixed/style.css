@@ -1,0 +1,31 @@
+.hlavicka {
+	/* napozicuj hlavičku fixně k hornímu okraji stránky */
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 80px;
+	width: 100vw;
+}
+
+
+.paticka {
+	/* napozicuj patičku fixně k dolnímu okraji stránky */
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 80px;
+	width: 100vw;
+}
+
+
+.poznamka {
+	/* napozicuj poznámku k pravému okraji okraji stránky */
+	position: fixed;
+	right: 50px;
+	bottom: 150px;
+}
+
+.obsah {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}

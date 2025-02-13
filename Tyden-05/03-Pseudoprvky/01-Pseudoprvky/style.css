@@ -1,0 +1,63 @@
+/* intuitivnejsi box-sizing */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+	font: 16px/1.5 sans-serif;
+}
+
+
+/*************************************************/
+
+/*
+CSS Selektory:
+
+::first-letter			první písmeno
+::first-line				první řádek
+
+::before						uvnitř prvku, před obsahem
+::after							uvnitř prvku, za obsahem
+*/
+
+
+/* h1::first-letter {
+	color: red;
+}
+
+.prvni::first-letter {
+	color: blue;
+	font-size: 4em;
+	font-weight: bold;
+	float: left;
+	margin-right: 20px;
+} */
+
+/* .druhy::first-line {
+	color: red;
+} */
+
+/* .druhy::first-line {
+	background: yellow;
+} */
+
+h1::before {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background: linear-gradient(red, yellow);
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+/* h2 {
+	border-bottom: 10px solid orange;
+} */
+
+h2::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 10px;
+	background: blue;
+}

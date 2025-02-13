@@ -1,0 +1,59 @@
+/* intuitivnejsi box-sizing */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+	font: 16px/1.5 sans-serif;
+}
+
+/*************************************************/
+
+.hlavni {
+	text-align: center;
+}
+
+.hlavni::before {
+	content: "";
+	display: block;
+	height: 40px;
+	background-image: url(images/flourish-top.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.hlavni::after {
+	content: "";
+	display: block;
+	height: 37px;
+	background-image: url(images/flourish-bottom.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h2::before {
+	content: "";
+	display: inline-block;
+	width: 89px;
+	height: 36px;
+	background-image: url(images/swirl-left.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 20px;
+}
+
+h2::after {
+	content: "";
+	display: inline-block;
+	width: 89px;
+	height: 36px;
+	background-image: url(images/swirl-right.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: 20px;
+}

@@ -1,0 +1,45 @@
+/* intuitivni box-sizing */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+	font: 16px/1.5 sans-serif;
+}
+
+/* ---------------------------- */
+/*
+  !important   inline  id   class  element
+  0            0       0    0      0
+*/
+
+
+.onas .nadpis span {
+	color: orange;
+}
+
+.nadpis {
+	color: blue;
+}
+
+
+body h1 {
+	color: green;
+}
+
+h1 {
+	color: red;
+}
+
+
+
+p {
+	color: orange !important;
+}
+
+#varovani {
+	color: blue;
+}
+.odstavec {
+	color: red;
+}
+

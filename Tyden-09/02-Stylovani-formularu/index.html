@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylování formulářů</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Stylování formulářů</h1>
+
+
+  <!-- Label a pole pod sebou -->
+  <!-- Label a pole vedle sebe -->
+
+  <div class="form-field">
+    <label for="jmeno">Jméno</label>
+    <input type="text" name="jmeno" id="jmeno" value="Alena">
+  </div>
+
+
+
+  <!-- <div class="form-field-inline">
+    <label for="prijmeni">Příjmení</label>
+    <input type="text" name="prijmeni" id="prijmeni" value="Nováková">
+  </div>
+
+  <div class="form-field-inline">
+    <label for="vek">Věk</label>
+    <input type="text" name="vek" id="vek" value="18">
+  </div> -->
+
+
+
+  <!--
+    Stylování textového pole <input> nebo <textarea> a tlačítek <button>
+    - margin, padding, border, barvy, písmo
+    - stylovatelný bez problémů
+    - pozor v CSS - nemůžeme stylovat jen "input"
+  -->
+
+
+
+  <!--
+    Stylování checkbox nebo radio
+    - v podstatě nemožné stylovat
+    - lze vyrobit "falešný" checkbox/radio pomocí speciálních CSS triků
+  -->
+
+  <!-- <div>
+    <input class="checkbox" type="checkbox" name="souhlas" id="souhlas">
+    <label for="souhlas">souhlasim se vsim</label>
+  </div> -->
+
+
+
+  <!--
+    Stylování <select>
+    - lze stylovat částečně
+    - na <option> uvnitř selectu lze nastavit jen velmi omezenou sadu vlastností
+  -->
+
+  <div class="form-field">
+    <label for="mesto">Město</label>
+
+    <select name="mesto" id="mesto">
+      <option>Praha</option>
+      <option>Brno</option>
+      <option>Ostrava</option>
+    </select>
+  </div>
+
+
+  <button class="button" type="submit">Odeslat</button>
+
+
+
+
+  <!--
+    Stylování stavů formulářového pole
+    - :focus, :valid, :invalid, :placeholder-shown
+  -->
+
+
+</body>
+</html>

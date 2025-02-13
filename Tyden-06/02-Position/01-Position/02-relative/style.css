@@ -1,0 +1,8 @@
+
+.relative {
+    /* přidej relativní pozicování prostředního obdélníku  */
+
+    position: relative;
+    left: 100px;
+    top: 50px;
+}

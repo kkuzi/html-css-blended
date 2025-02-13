@@ -1,0 +1,29 @@
+
+.rodic {
+    /*
+    co musi mit nastaveno rodic,
+    aby v ramci nej fungovalo absolutni pozicovani?
+    */
+    position: relative;
+}
+
+.potomek {
+    /* pridej absolutni pozicovani potomka */
+    position: absolute;
+    left: 100px;
+    top: 0;
+
+}
+
+
+
+
+/* --------------------- */
+
+/* toto je styl jen kvuli tomu, aby obdelnik s rodicem nejak vypadal */
+.rodic {
+    margin: 100px auto;
+    width: 600px;
+    height: 400px;
+    border: 5px dashed red;
+}
